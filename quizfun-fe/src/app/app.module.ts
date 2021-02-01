@@ -1,29 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
+import { CreateQuizComponent } from './create-quiz/create-quiz.component';
+import {router} from './app.routing';
 
-const routes: Routes = [
-  {path: 'quizzes', component: QuizzesComponent}
-];
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    QuizzesComponent
+    QuizzesComponent,
+    CreateQuizComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
+    router
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -20,7 +20,7 @@ export class QuizzesComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe();
+    this.route.queryParamMap.subscribe(params => console.log(params));
   }
 
 }
